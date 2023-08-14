@@ -1,0 +1,63 @@
+package com.app.entity;
+
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+@Entity
+@Table(name = "restaurants")
+public class Restaurants {
+
+	@Id	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+//	@GeneratedValue(generator = "uuid")
+//	@GenericGenerator(name = "uuid",strategy = "org.hibernate.id.UUIDGenerator")
+	private Long id;
+	@Column(length = 30)
+	private String name;
+	@Column(length = 30, unique = true) // =>unique
+	private String email;
+	@Column(nullable = false) // =>NOT NULL
+	private String password;
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Restaurants(Long id, String name, String email) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+	}
+	@Override
+	public String toString() {
+		return "Restaurants [id=" + id + ", name=" + name + ", email=" + email + "]";
+	}		
+	
+	
+	
+	
+}

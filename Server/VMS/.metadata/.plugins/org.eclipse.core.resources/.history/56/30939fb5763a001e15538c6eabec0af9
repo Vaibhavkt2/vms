@@ -1,0 +1,20 @@
+package com.app.entity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Finance extends BaseEntity {
+    @ManyToOne
+    @JoinColumn(name = "car_id")
+    private Car car;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
+
+    private double loanAmount;
+    private double interestRate;
+    private double monthlyPayment;
+
+    // Constructors, getters, setters, and other methods
+}

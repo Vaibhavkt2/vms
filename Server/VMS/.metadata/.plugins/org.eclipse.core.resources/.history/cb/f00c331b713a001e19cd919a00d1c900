@@ -1,0 +1,13 @@
+package com.app.service;
+
+import com.app.entity.Restaurants;
+import com.app.repository.RestaurantRepo;
+
+public interface RestaurantService {
+	
+	Restaurants addNewRestaurant(Restaurants r);
+	
+	//String deleteRestaurant(Restaurants r);
+	
+
+}

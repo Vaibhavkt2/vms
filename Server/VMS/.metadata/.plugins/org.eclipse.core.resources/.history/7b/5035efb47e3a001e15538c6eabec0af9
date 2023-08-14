@@ -1,0 +1,35 @@
+package com.app.entity;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@Entity
+public class Fianance extends BaseEntity {
+    @ManyToOne
+    @JoinColumn(name = "car_id")
+    private Cars car;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Users user;
+
+    private double loanAmount;
+    private double interestRate;
+    private double monthlyPayment;
+
+    // Constructors, getters, setters, and other methods
+}

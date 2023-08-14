@@ -1,0 +1,21 @@
+package com.app.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Test_Drive extends BaseEntity {
+    @ManyToOne
+    @JoinColumn(name = "car_id")
+    private Cars car;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Cus customer;
+
+    private Date testDriveDate;
+    private String comments;
+
+    // Constructors, getters, setters, and other methods
+}

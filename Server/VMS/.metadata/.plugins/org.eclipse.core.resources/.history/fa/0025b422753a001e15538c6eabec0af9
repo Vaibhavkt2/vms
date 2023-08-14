@@ -1,0 +1,29 @@
+package com.app.entity;
+
+
+@Entity
+public class Customer extends BaseEntity {
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String phone;
+    private String address;
+
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    private List<CarBooking> bookings;
+
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    private List<Finance> finances;
+
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    private List<Insurance> insurances;
+
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    private List<TestDrive> testDrives;
+
+    // Constructors, getters, setters, and other methods
+}

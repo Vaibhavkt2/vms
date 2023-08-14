@@ -1,0 +1,18 @@
+package com.app.entity;
+
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Car_Specs extends BaseEntity {
+    @OneToOne
+    @JoinColumn(name = "car_id")
+    private Cars car;
+
+    private String color;
+    private String engine;
+    private int horsepower;
+    private String dimensions;
+
+    // Constructors, getters, setters, and other methods
+}

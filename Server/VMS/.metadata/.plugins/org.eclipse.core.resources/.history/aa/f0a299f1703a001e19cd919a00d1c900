@@ -1,0 +1,35 @@
+package com.app.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name = "category")
+public class Category {
+
+	@Id	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+//	@GeneratedValue(generator = "uuid")
+//	@GenericGenerator(name = "uuid",strategy = "org.hibernate.id.UUIDGenerator")
+	private Long id;
+	@Column(length = 30)
+	private String type1;
+	@Column(length = 30)
+	private String type2;
+	@Column(length = 30, unique = true) // =>unique
+	private String email;
+	@Column(nullable = false) // =>NOT NULL
+	private String password;	
+	
+}
+
+
+
+
+

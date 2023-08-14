@@ -1,0 +1,18 @@
+package com.app.entity;
+
+@Entity
+public class CarBooking extends BaseEntity {
+    @ManyToOne
+    @JoinColumn(name = "car_id")
+    private Car car;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
+
+    private Date bookingDate;
+    private Date startDate;
+    private Date endDate;
+
+    // Constructors, getters, setters, and other methods
+}

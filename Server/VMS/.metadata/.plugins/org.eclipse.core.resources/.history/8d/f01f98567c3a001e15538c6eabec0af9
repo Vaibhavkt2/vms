@@ -1,0 +1,24 @@
+package com.app.entity;
+
+import java.sql.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Car_Bookings extends BaseEntity {
+    @ManyToOne
+    @JoinColumn(name = "car_id")
+    private Cars car;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Users users;
+
+    private Date bookingDate;
+    private Date startDate;
+    private Date endDate;
+
+    // Constructors, getters, setters, and other methods
+}

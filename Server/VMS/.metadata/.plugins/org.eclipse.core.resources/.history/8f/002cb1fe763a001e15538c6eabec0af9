@@ -1,0 +1,17 @@
+package com.app.entity;
+
+@Entity
+public class TestDrive extends BaseEntity {
+    @ManyToOne
+    @JoinColumn(name = "car_id")
+    private Car car;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
+
+    private Date testDriveDate;
+    private String comments;
+
+    // Constructors, getters, setters, and other methods
+}
