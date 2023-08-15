@@ -1,5 +1,0 @@
-package com.app.entity;
-
-public enum EnumType {
-food1,food2,food3
-}

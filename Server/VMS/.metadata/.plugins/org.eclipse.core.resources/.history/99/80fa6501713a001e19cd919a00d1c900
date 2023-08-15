@@ -1,9 +1,0 @@
-package com.app.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.app.entity.Restaurants;
-
-public interface RestaurantRepo extends JpaRepository<Restaurants, Long>{
-
-}
