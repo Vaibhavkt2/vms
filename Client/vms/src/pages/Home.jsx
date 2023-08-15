@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import HeroSlider from "../components/UI/HeroSlider";
 import Helmet from "../components/Helmet/Helmet";
@@ -11,10 +11,33 @@ import carData from "../assets/data/carData";
 import CarItem from "../components/UI/CarItem";
 //import BecomeDriverSection from "../components/UI/BecomeDriverSection";
 import Testimonial from "../components/UI/Testimonial";
+import axios from "axios";
 
 //import BlogList from "../components/UI/BlogList";
 
 const Home = () => {
+
+  const [cars, setCars] = useState([]); 
+  
+  useEffect( () => {
+    loadCars();
+  }, []);
+
+  const loadCars = () => {
+    axios.get('http://localhost:6060/cars')
+    .then(function (response) {
+      setCars(response.data);
+      console.log(response);
+    })
+    .catch(function (error) {
+      
+      console.log(error);
+    })
+    .finally(function () {
+     
+    });
+  }
+
   return (
     <Helmet title="Home">
       {/* ============= hero section =========== */}
@@ -61,7 +84,7 @@ const Home = () => {
               <h2 className="section__title">Hot Offers</h2>
             </Col>
 
-            {carData.slice(0, 6).map((item) => (
+            {cars.slice(0, 6).map((item) => (
               <CarItem item={item} key={item.id} />
             ))}
           </Row>
@@ -71,7 +94,7 @@ const Home = () => {
       {/* <BecomeDriverSection /> */}
 
       {/* =========== testimonial section =========== */}
-      <section>
+      {/* <section>
         <Container>
           <Row>
             <Col lg="12" className="mb-4 text-center">
@@ -82,11 +105,11 @@ const Home = () => {
             <Testimonial />
           </Row>
         </Container>
-      </section>
+      </section> */}
 
       {/* =============== blog section =========== */}
-      <section>
-        {/* <Container>
+      {/* <section>
+        <Container>
           <Row>
             <Col lg="12" className="mb-5 text-center">
               <h6 className="section__subtitle">Explore our blogs</h6>
@@ -95,8 +118,8 @@ const Home = () => {
 
             <BlogList />
           </Row>
-        </Container> */}
-      </section>
+        </Container>
+      </section> */}
     </Helmet>
   );
 };

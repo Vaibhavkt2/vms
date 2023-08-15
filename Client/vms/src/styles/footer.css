@@ -89,6 +89,22 @@
   .footer__bottom p {
     font-size: 0.7rem;
   }
-
   
+}
+
+.loan {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.insurance {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+
+.common {
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: -80px;
 }

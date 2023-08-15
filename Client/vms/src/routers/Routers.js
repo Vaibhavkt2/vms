@@ -4,13 +4,15 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import CarListing from "../pages/CarListing";
 import CarDetails from "../pages/CarDetails";
-import Blog from "../pages/Blog";
-import BlogDetails from "../pages/BlogDetails";
+//import Blog from "../pages/Blog";
+//import BlogDetails from "../pages/BlogDetails";
 import NotFound from "../pages/NotFound";
 import Contact from "../pages/Contact";
 import FinancePage from "../pages/Finance";
 import Services from "../pages/Services";
 import TestDrivePage from "../pages/Test_Drive";
+import Login from "../Authentication/Login";
+import Registration from "../Authentication/Registration";
 
 const Routers = () => {
   return (
@@ -27,6 +29,8 @@ const Routers = () => {
       <Route path="/blogs/:slug" element={<BlogDetails />} /> */}
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Registration />} />
     </Routes>
   );
 };

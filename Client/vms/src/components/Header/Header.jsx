@@ -60,19 +60,25 @@ const Header = () => {
               <div className="header__top__left">
                 <span>Need Help?</span>
                 <span className="header__top__help">
-                  <i class="ri-phone-fill"></i> +1-202-555-0149
+                  <i class="ri-phone-fill"></i> +917057816893
                 </span>
               </div>
             </Col>
 
             <Col lg="6" md="6" sm="6">
               <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
-                <Link to="#" className=" d-flex align-items-center gap-1">
+                {/* <Link to="#" className=" d-flex align-items-center gap-1">
                   <i class="ri-login-circle-line"></i> Login
+                </Link> */}
+                <Link to="/login" className="btn btn-outline-primary" > 
+                  <i class="ri-login-circle-line"></i> Login 
                 </Link>
 
-                <Link to="#" className=" d-flex align-items-center gap-1">
+                {/* <Link to="#" className=" d-flex align-items-center gap-1">
                   <i class="ri-user-line"></i> Register
+                </Link> */}
+                <Link to="/register" className="btn btn-outline-primary" >
+                  <i class="ri-user-line"></i> Register 
                 </Link>
               </div>
             </Col>

@@ -44,7 +44,7 @@ const Footer = () => {
                 </Link>
               </h1>
             </div>
-            <p className="foRent Car <br /> Serviceoter__logo-content">
+            <p className="foRent Car <br /> Serviceoter__logo-content" style={{color : "white"}}>
             Welcome to VMS, where automotive excellence meets personalized service. 
               With a diverse selection of hand-picked vehicles, we strive to provide a seamless and enjoyable car-buying experience. 
               Our knowledgeable team is dedicated to understanding your needs and helping you find the perfect vehicle that fits your lifestyle and aspirations. 
@@ -71,9 +71,9 @@ const Footer = () => {
             <div className="mb-4">
               <h5 className="footer__link-title mb-4">Head Office</h5>
               <p className="office__info">123 Hinjewadi, Phase 1, Pune, India</p>
-              <p className="office__info">Phone: +0995345875365</p>
+              <p className="office__info">Phone: +91-7057816893</p>
 
-              <p className="office__info">Email: mayurrane@gmail.com</p>
+              <p className="office__info">Email: vaibhavkt2@gmail.com</p>
 
               <p className="office__info">Office Time: 10am - 7pm</p>
             </div>

@@ -41,7 +41,7 @@ const FinancePage = () => {
 
   return (
     <div>
-      <h2>Finance Page</h2>
+      <h2 style={{color : 'red'}}>Finance Page</h2>
 
       <h3>Car Selection</h3>
       <select onChange={handleCarChange}>
@@ -53,27 +53,33 @@ const FinancePage = () => {
         ))}
       </select>
 
-      {selectedCar && (
-        <div>
-          <h3>Loan for {selectedCar.name}</h3>
-          <input
-            type="number"
-            placeholder="Loan amount"
-            value={loanAmount}
-            onChange={handleLoanChange}
-          />
+      <center>
+        {selectedCar && (
+          <div className='common'>
+            <div className='loan'>
+              <h5>Loan for {selectedCar.name}</h5>
+              <input
+                type="number"
+                placeholder="Loan amount"
+                value={loanAmount}
+                onChange={handleLoanChange}
+              />
+            </div>
 
-          <h3>Insurance for {selectedCar.name}</h3>
-          <input
-            type="number"
-            placeholder="Insurance amount"
-            value={insuranceAmount}
-            onChange={handleInsuranceChange}
-          />
+            <div className='insurance'>
+              <h5>Insurance for {selectedCar.name}</h5>
+              <input
+                type="number"
+                placeholder="Insurance amount"
+                value={insuranceAmount}
+                onChange={handleInsuranceChange}
+              />
+            </div>
 
-          <h3>Monthly EMI: ${emi}</h3>
-        </div>
-      )}
+            <h4>Monthly EMI: ${emi}</h4>
+          </div>
+        )}
+      </center>
     </div>
   );
 };

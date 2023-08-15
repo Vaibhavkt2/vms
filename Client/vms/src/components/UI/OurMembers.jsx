@@ -8,8 +8,8 @@ import ava03 from "../../assets/all-images/ava-3.jpg";
 
 const OUR__MEMBERS = [
   {
-    name: "Jhon Doe",
-    experience: "5 years of experience",
+    name: "Vaibhav Talele",
+    experience: "1 years of experience",
     fbUrl: "#",
     instUrl: "#",
     twitUrl: "#",
@@ -18,8 +18,8 @@ const OUR__MEMBERS = [
   },
 
   {
-    name: "David Lisa",
-    experience: "5 years of experience",
+    name: "Mayur Rane",
+    experience: "1 years of experience",
     fbUrl: "#",
     instUrl: "#",
     twitUrl: "#",
@@ -28,7 +28,17 @@ const OUR__MEMBERS = [
   },
 
   {
-    name: "Hilton King",
+    name: "Sanket Patil",
+    experience: "1 years of experience",
+    fbUrl: "#",
+    instUrl: "#",
+    twitUrl: "#",
+    linkedinUrl: "#",
+    imgUrl: ava02,
+  },
+
+  {
+    name: "Suyog Patil",
     experience: "5 years of experience",
     fbUrl: "#",
     instUrl: "#",
@@ -37,15 +47,15 @@ const OUR__MEMBERS = [
     imgUrl: ava03,
   },
 
-  {
-    name: "Jhon Doe",
-    experience: "5 years of experience",
-    fbUrl: "#",
-    instUrl: "#",
-    twitUrl: "#",
-    linkedinUrl: "#",
-    imgUrl: ava01,
-  },
+  // {
+  //   name: "Eshwar Lidhure",
+  //   experience: "5 years of experience",
+  //   fbUrl: "#",
+  //   instUrl: "#",
+  //   twitUrl: "#",
+  //   linkedinUrl: "#",
+  //   imgUrl: ava01,
+  // },
 ];
 
 const OurMembers = () => {
